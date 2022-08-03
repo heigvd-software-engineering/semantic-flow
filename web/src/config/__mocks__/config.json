@@ -1,0 +1,160 @@
+{
+    "sparql" : {
+        "api": { 
+            "query": "http://localhost:3030/ds/query",
+            "update":"http://localhost:3030/ds/update"
+        },
+        "graph": "", 
+        "prefixes": {
+            "song"      : "http://stardog.com/tutorial/song/",
+            "stardog"   : "http://stardog.com/tutorial/",
+            "geo"       : "http://www.w3.org/2003/01/geo/wgs84_pos#",
+            "rdf"       : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "xsd"       : "http://www.w3.org/2001/XMLSchema#"
+        },
+        "type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    },
+    "default_type_attribute": { 
+        "prefix": "rdf",
+        "name": "type",
+        "grouping": "attribute",
+        "editor": {
+            "field": "selector",
+            "type": "type-selector"
+        }
+    },
+    "default_attribute_editor": {
+        "field": "literal",
+        "type": "readonly"
+    },
+    "type_attribute_editor": {
+        "field": "selector",
+        "type": "type-selector"
+    },
+    "template": [
+        {
+            "prefix": "stardog",
+            "name": "Producer",
+            "predicates": [
+                { 
+                    "prefix": "stardog",
+                    "name": "name",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{
+                    "prefix": "stardog",
+                    "name": "description" ,
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-textarea"
+                    }
+                }, {
+                    "prefix": "stardog",
+                    "name": "born",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "bnode",
+                        "type": "uncertain-around-date"
+                    }
+                }
+            ]
+        }, {
+            "prefix": "stardog",
+            "name": "Songwriter",
+            "predicates": [
+               { 
+                    "prefix": "stardog",
+                    "name": "name",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{
+                    "prefix": "stardog",
+                    "name": "description" ,
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-textarea"
+                    }
+                }, {
+                    "prefix": "stardog",
+                    "name": "created",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "bnode",
+                        "type": "uncertain-around-date"
+                    }
+                }, {
+                    "prefix": "stardog",
+                    "name": "geographic_coordinates",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "bnode",
+                        "type": "spatial-lat-lon"
+                    }
+                }, {
+                    "prefix": "stardog",
+                    "name": "first_appearance",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "bnode",
+                        "type": "uncertain-possibilities-date"
+                    }
+                }
+            ]
+        },{
+            "prefix": "stardog",
+            "name": "Song",
+            "predicates": [
+                { 
+                    "prefix": "stardog",
+                    "name": "name", 
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{
+                    "prefix": "stardog",
+                    "name": "description",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-textarea"
+                    }
+                },{
+                    "prefix": "stardog",
+                    "name": "length",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-number"
+                    },
+                    "datatype": {
+                        "prefix": "xsd",
+                        "name": "integer"
+                    }
+                }
+            ]
+        }
+    ],
+    "react_flow": {
+        "positioning": {
+            "root": {
+                "x": 75,
+                "y": 100
+            },
+            "spacing": {
+                "horizontal": 700,
+                "vertical": 50
+            },
+            "offset": 25
+        }
+    }
+}

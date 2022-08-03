@@ -1,0 +1,189 @@
+<!-- -*- mode: indented-text;-*- -->
+<web:RDF
+	xmlns:web="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:util="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns="#"
+	xmlns:kpic="#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	>
+<!-- cf http://www.w3.org/1999/11/11-WWWProposal/
+     esp http://www.w3.org/History/1989/Image1.gif
+      -->
+
+<!-- @@ kpic: knowledge pictures. integration with SVG -->
+<!-- idea: put IDs on the statements, then give
+     displacement for each statement.
+     Also, give coordinates for each node.
+     Then use js-prolog to generate SVG. -->
+
+  <Document web:ID="thisDocument">
+    <util:label>This document</util:label>
+    <describes>
+      <Proposal web:ID="mesh" dc:title="Mesh">
+        <unifies>
+	  <web:Description web:ID="enquire" util:label="ENQUIRE"/>
+	</unifies>
+
+        <unifies>
+	  <web:Description web:ID="vaxNotes" util:label="VAX/NOTES"/>
+	</unifies>
+
+        <unifies>
+	  <Thing web:ID="uucp" util:label="uucp News"/>
+	</unifies>
+
+        <unifies>
+	  <web:Description web:ID="cernDoc" util:label="CERNDOC">
+	    <includes web:resource="thisDocument"/>
+	  </web:Description>
+	</unifies>
+
+	<describes>
+	  <Organization web:ID="cern" util:label="C.E.R.N">
+	    <includes>
+	      <Division>
+	        <includes>
+		  <Group>
+		    <produces web:resource="#cernDoc"/>
+		  </Group>
+		  <Group>
+		    <includes>
+		      <Section>
+		        <includes>
+			  <Person util:label="Tim Berners-Lee">
+			    <wrote web:resource="#thisDocument"/>
+			  </Person>
+			</includes>
+		        <includes>
+		          <web:Description/>
+			</includes>
+		        <includes>
+		          <web:Description/>
+			</includes>
+		        <includes>
+		          <web:Description/>
+			</includes>
+		      </Section>
+		    </includes>
+		    <includes>
+		      <web:Description/>
+		    </includes>
+		  </Group>
+		</includes>
+	      </Division>
+	    </includes>
+	  </Organization>
+	</describes>
+      </Proposal>
+    </describes>
+    <describes>
+      <Concept web:ID="Hypertext" util:label='"Hypertext"'> <!-- @@ why extra quotes? -->
+        <includes>
+	  <Concept util:label="Hypermedia"/>
+	</includes>
+	<includes>
+	  <Concept util:label="Linked information">
+	    <forExample>
+	      <web:Description util:label="Hyper Card"/>
+	    </forExample>
+	    <forExample web:resource="#enquire"/>	
+	  </Concept>
+	</includes>
+      </Concept>
+    </describes>
+
+    <refersTo>
+      <Document>
+        <describes web:resource="#Hypertext"/>
+      </Document>
+    </refersTo>
+    <refersTo>
+      <Document/>
+    </refersTo>
+    <refersTo>
+      <Document/>
+    </refersTo>
+  </Document>
+
+  <Concept util:label="Computer conferencing">
+    <forExample web:resource="#mesh"/>
+    <forExample web:resource="#vaxNotes"/>
+    <forExample web:resource="#uucp"/>
+    <forExample>
+      <web:Description web:ID="IBMGroupTalk" util:label="IBM GrupTalk"/>
+    </forExample>
+  </Concept>
+
+  <Concept util:label="Hierarchical systems">
+    <forExample web:resource="#IBMGroupTalk"/>
+    <forExample web:resource="#uucp"/>
+    <forExample web:resource="#vaxNotes"/>
+    <forExample web:resource="#cernDoc"/>
+    <forExample web:resource="#cern"/>
+  </Concept>
+
+
+  <!-- schema stuff -->
+
+  <util:Class web:ID="Document" util:label="Document">
+    <kpic:nodeClass>
+      <kpic:NodeClass>
+        <kpic:shape web:resource="#quadrilateral"/> <!-- @change to class rule -->
+	<kpic:hasRule>@@ kpic:label(?me, ?lab) &lt;- util:label(?me, ?lab)
+	 <!-- compare with sameValues stuff from ontolingua,
+	      i.e. uncle = samevalues(parent, brother)
+	      -->
+	</kpic:hasRule>
+      </kpic:NodeClass>
+    </kpic:nodeClass>
+  </util:Class>
+
+  <util:Property web:ID="describes"
+    util:label="describes">
+    <util:domain web:resource="#Document"/>
+    <util:range web:resource="#Document"/>
+
+    <kpic:arcStyle>@@default + get label from util:label</kpic:arcStyle>
+  </util:Property>
+    
+  <util:Property web:ID="refersTo"
+    util:label="refers to">
+    <util:domain web:resource="#Document"/>
+    <util:range web:resource="#Document"/>
+
+    <kpic:arcStyle>@@default + get label from util:label</kpic:arcStyle>
+  </util:Property>
+    
+
+
+  <util:Class web:ID="Proposal"
+	      util:label="Proposal">
+    <kpic:nodeStyle>@@default + get label from util:label</kpic:nodeStyle>
+  </util:Class>
+
+  <util:Property web:ID="unifies"
+    util:label="unifies">
+    <kpic:arcStyle>@@default + get label from util:label</kpic:arcStyle>
+  </util:Property>
+
+
+  <util:Property web:ID="includes"
+    util:label="includes">
+    <kpic:arcStyle>@@dotted + get label from util:label</kpic:arcStyle>
+  </util:Property>
+
+  <util:Class web:ID="Concept" util:label="Concept">
+    <util:subClassOf resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </util:Class>
+
+  <util:Property web:ID="forExample"
+    util:label="for example">
+
+    <kpic:arcStyle>@@dotted + get label from util:label</kpic:arcStyle>
+  </util:Property>
+
+  <util:Class web:ID="Person" util:label="Person"/>
+
+  <!-- @@more -->
+
+</web:RDF>

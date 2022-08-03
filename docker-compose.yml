@@ -1,0 +1,19 @@
+version: '2'
+services:
+  fuseki: 
+    build:
+      context: ./docker/jena-fuseki
+      dockerfile: Dockerfile
+    image: fuseki
+    ports:
+      - "3030:3030"
+  rdf-editor:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    command: npm run start
+    image: rdf-editor
+    depends_on:
+      - fuseki
+    ports:
+      - "3000:3000"

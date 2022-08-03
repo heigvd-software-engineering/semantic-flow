@@ -1,0 +1,235 @@
+{
+    "song_with_2_songwriters": {
+      "active_location": {
+        "type": "uri", 
+        "value": "http://stardog.com/tutorial/I_Just_Want_to_Dance_with_You"
+      },
+      "triples": [
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/I_Just_Want_to_Dance_with_You" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/length" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "207" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/I_Just_Want_to_Dance_with_You" } ,
+          "p": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+          "o": { "type": "uri" , "value": "http://stardog.com/tutorial/Song" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/I_Just_Want_to_Dance_with_You" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/name" } ,
+          "o": { "type": "literal" , "value": "I Just Want to Dance with You" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/I_Just_Want_to_Dance_with_You" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/description" } ,
+          "o": { "type": "literal" , "value": "\"I Just Want to Dance with You\" is a song written by John Prine and Roger Cook, and performed by American country music singer George Strait. It was released in April 1998 as the first single to his album, One Step at a Time, it is his 34th Number One single on the Billboard Hot Country Singles & Tracks (now Hot Country Songs) chart, and his 42nd Number One single when all major trade charts are counted. Prine recorded it 12 years earlier, for his 1986 album \"German Afternoons.\" It was also a hit for Daniel O'Donnell in 1992, reaching 20 in the UK charts." }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/I_Just_Want_to_Dance_with_You" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/writer" } ,
+          "o": { "type": "uri" , "value": "http://stardog.com/tutorial/Roger_Cook_(Songwriter)" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/I_Just_Want_to_Dance_with_You" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/writer" } ,
+          "o": { "type": "uri" , "value": "http://stardog.com/tutorial/John_Prine" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/Roger_Cook_(Songwriter)" } ,
+          "p": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+          "o": { "type": "uri" , "value": "http://stardog.com/tutorial/Songwriter" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/Roger_Cook_(Songwriter)" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/name" } ,
+          "o": { "type": "literal" , "value": "Roger Cook (Songwriter)" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/Roger_Cook_(Songwriter)" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/description" } ,
+          "o": { "type": "literal" , "value": "Roger Frederick Cook (born 19 August 1940) is an English singer, Songwriter and record producer, who has written many hit records for other recording artists. He has also had a successful recording career in his own right. In 1997, Cook became the only British Songwriter to enter the Nashville Songwriters Hall of Fame." }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/Roger_Cook_(Songwriter)" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/created" } ,
+          "o": { "type": "bnode" , "value": "b0" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b0" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/date" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#date" , "value": "2019.7.XX" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b0" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/uncertainty" } ,
+          "o": { "type": "bnode" , "value": "b1" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b1" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/year" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "0" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b1" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/month" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b1" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/day" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "0" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/John_Prine" } ,
+          "p": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+          "o": { "type": "uri" , "value": "http://stardog.com/tutorial/Songwriter" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/John_Prine" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/name" } ,
+          "o": { "type": "literal" , "value": "John Prine" }
+        } ,
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/John_Prine" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/description" } ,
+          "o": { "type": "literal" , "value": "John Prine (born October 10, 1946) is an American country/folk singer-Songwriter. He has been active as a composer, recording artist, and live performer since the early 1970s. Born and raised in Maywood, Illinois, Prine learned to play the guitar at the age of 14. Subsequently, serving in West Germany with the U.S. armed forces, by the late 1960s he had moved to Chicago, where he worked as a mailman, writing and singing songs as a hobby. Becoming a part of the city's folk revival, he was discovered by Kris Kristofferson, resulting in the production of Prine's self-titled debut album through Atlantic Records in 1971. After receiving critical acclaim, Prine focused on his musical career, recording three more albums for Atlantic. He then signed to Asylum Records, where he recorded an addition" }
+        }
+      ]
+    },
+    "default_bnode_lat_lon": {
+      "active_location": {
+        "type": "bnode", 
+        "value": "bnode-focus"
+      },
+      "triples": [
+        { 
+          "s": { "type": "bnode" , "value": "b0" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/latitude" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#float" , "value": "34.456" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b0" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/longitude" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#float" , "value": "12.345" }
+        } 
+      ]
+    },
+    "template_bnode_lat_lon": {
+      "active_location": {
+        "type": "uri", 
+        "value": "http://stardog.com/tutorial/teofanovic_stefan"
+      },
+      "triples": [
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/teofanovic_stefan" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/geographic_coordinates" } ,
+          "o": { "type": "bnode" , "value": "b0" }
+        },
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/teofanovic_stefan" } ,
+          "p": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+          "o": { "type": "uri" , "value": "http://stardog.com/tutorial/Songwriter" }
+        },
+        { 
+          "s": { "type": "bnode" , "value": "b0" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/latitude" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#float" , "value": "34.456" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b0" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/longitude" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#float" , "value": "12.345" }
+        } 
+      ]
+    },
+    "default_bnode_uncertain_around_date": {
+      "active_location": {
+        "type": "bnode", 
+        "value": "bnode-focus"
+      },
+      "triples": [
+        { 
+          "s": { "type": "bnode" , "value": "b1" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/date" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#date" , "value": "1986.7.29" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b1" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/uncertainty" } ,
+          "o": { "type": "bnode" , "value": "b3" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b3" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/year" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "0" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b3" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/month" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b3" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/day" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+        }
+      ]
+    },
+    "template_bnode_uncertain_around_date": {
+      "active_location": {
+        "type": "uri", 
+        "value": "http://stardog.com/tutorial/teofanovic_stefan"
+      },
+      "triples": [
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/teofanovic_stefan" } ,
+          "p": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+          "o": { "type": "uri" , "value": "http://stardog.com/tutorial/Songwriter" }
+        },
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/teofanovic_stefan" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/created" } ,
+          "o": { "type": "bnode" , "value": "b1" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b1" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/date" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#date" , "value": "1986.7.29" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b1" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/uncertainty" } ,
+          "o": { "type": "bnode" , "value": "b3" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b3" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/year" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b3" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/month" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+        } ,
+        { 
+          "s": { "type": "bnode" , "value": "b3" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/day" } ,
+          "o": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+        }
+      ]
+    },
+    "typeless_individual": {
+      "active_location": {
+        "type": "uri", 
+        "value": "http://stardog.com/tutorial/teofanovic_stefan"
+      },
+      "triples": [
+        { 
+          "s": { "type": "uri" , "value": "http://stardog.com/tutorial/teofanovic_stefan" } ,
+          "p": { "type": "uri" , "value": "http://stardog.com/tutorial/name" } ,
+          "o": { "type": "literal" , "value": "Stefan Teofanovic" }
+        }
+      ]
+    }
+}

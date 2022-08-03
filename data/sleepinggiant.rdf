@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://my.netscape.com/rdf/simple/0.9/">
+<channel>
+  <title>Sleeping Giant</title>
+  <link>http://www.sleeping-giant.ie/</link>
+  <description>Views and news from Sleeping-Giant, West Cork</description>
+</channel>
+<item>
+<title>UTAH YULETIDE</title>
+<link>http://www.sleeping-giant.ie/katcha/index.html</link>
+</item>
+<item>
+<title>Jim Comic's Gig Roundup</title>
+<link>http://www.sleeping-giant.ie/pressrelease/pr00119991222.html</link>
+</item>
+<item>
+<title>Jim Comic's Gig Roundup</title>
+<link>http://www.sleeping-giant.ie/pressrelease/pr00119991216.html</link>
+</item>
+<item>
+<title>Site for sale at Kilronan, Dunmanway, Co Cork</title>
+<link>http://www.dunmanway.com/lehanes/property/forsale/s0004.html</link>
+</item>
+<item>
+<title>FOUR-BEDROOMED HOUSE, 14 MILES EAST OF CASTLETOWNBEREŠ</title>
+<link>http://www.dunmanway.com/lehanes/property/forsale/pr0004.html</link>
+</item>
+<item>
+<title>A picture of my first Wap test</title>
+<link>http://www.sleeping-giant.ie/wap/</link>
+</item>
+<item>
+<title>Weekly Briefing on European Issues</title>
+<link>http://www.sleeping-giant.ie/pressrelease/pr00119991213.html</link>
+</item>
+<item>
+<title>QUICKTAKE</title>
+<link>http://www.sleeping-giant.ie/katcha/index.html</link>
+</item>
+<item>
+<title>WAP Forum</title>
+<link>http://www.wapforum.org/</link>
+</item>
+<item>
+<title>WAP Wireless Markup Language Specification (WML)</title>
+<link>http://www.oasis-open.org/cover/wap-wml.html</link>
+</item>
+<item>
+<title>Irish Internet Association Event</title>
+<link>http://www.iia.ie/events/events.html</link>
+</item>
+<item>
+<title>A wml tutorial from Zvon</title>
+<link>http://zvon.vscht.cz/HTMLonly/WMLTutorial/Examples/Example1/index.html</link>
+</item>
+<item>
+<title>Weekly Briefing on European Issues</title>
+<link>http://www.sleeping-giant.ie/pressrelease/pr00119991201.html</link>
+</item>
+<item>
+<title>Weekly Briefing on European Issues</title>
+<link>http://www.sleeping-giant.ie/pressrelease/pr00119991202.html</link>
+</item>
+<item>
+<title>Lehane Group of Companies</title>
+<link>http://www.dunmanway.com/lehanes/</link>
+</item>
+
+</rdf:RDF>

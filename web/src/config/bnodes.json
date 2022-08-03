@@ -1,0 +1,115 @@
+{
+    "uncertain-around-date" : {
+        "bnode_type": "bnode-individual",
+        "meta": {
+          "icon": "historical-date-icon",
+          "title": "Uncertain Around Date"
+        },
+        "data": {
+          "date": {
+            "bnode_type": "bnode-link",
+            "type": "literal",
+            "object": "XXXX.XX.XX",
+            "predicate": "http://stardog.com/tutorial/date",
+            "datatype": "http://www.w3.org/2001/XMLSchema#date"
+          },
+          "uncertainty": {
+            "bnode_type": "bnode-individual",
+            "predicate": "http://stardog.com/tutorial/uncertainty",
+            "data": {
+              "year": {
+                "bnode_type": "bnode-link",
+                "type": "literal",
+                "object": "0",
+                "predicate": "http://stardog.com/tutorial/year",
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer"
+              },
+              "month": {
+                "bnode_type": "bnode-link",
+                "type": "literal",
+                "object": "0",
+                "predicate": "http://stardog.com/tutorial/month",
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer"
+              },
+              "day": {
+                "bnode_type": "bnode-link",
+                "type": "literal",
+                "object": "0",
+                "predicate": "http://stardog.com/tutorial/day",
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer"
+              }
+            }
+          }
+        }
+    },
+    "uncertain-possibilities-date" : {
+      "bnode_type": "bnode-individual",
+      "meta": {
+        "icon": "uncertain-possibilities-date-icon",
+        "title": "Uncertain Possibilities Date",
+        "possibility_template": {
+          "bnode_type": "bnode-link",
+          "type": "literal",
+          "object": "XXXX.XX.XX",
+          "predicate": "http://stardog.com/tutorial/possibility",
+          "datatype": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "best_guess_template": {
+          "bnode_type": "bnode-link",
+          "type": "literal",
+          "object": "XXXX.XX.XX",
+          "predicate": "http://stardog.com/tutorial/best_guess",
+          "datatype": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      },
+      "data": {
+        "best_guess": {
+          "bnode_type": "bnode-link",
+          "type": "literal",
+          "object": "XXXX.XX.XX",
+          "predicate": "http://stardog.com/tutorial/best_guess",
+          "datatype": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "possibility": {}
+      }
+    },
+    "spatial-lat-lon" : {
+      "bnode_type": "bnode-individual",
+      "meta": {
+        "title": "Geographic Coordinates",
+        "icon": "spatial-lat-lon-icon"
+      },
+      "data": {
+        "latitude": {
+          "bnode_type": "bnode-link",
+          "type": "literal",
+          "object": "",
+          "predicate": "http://stardog.com/tutorial/latitude",
+          "datatype": "http://www.w3.org/2001/XMLSchema#float"
+        },
+        "longitude": {
+          "bnode_type": "bnode-link",
+          "type": "literal",
+          "object": "",
+          "predicate": "http://stardog.com/tutorial/longitude",
+          "datatype": "http://www.w3.org/2001/XMLSchema#float"
+        }
+      }
+  },
+  "hello-world" : {
+    "bnode_type": "bnode-individual",
+    "meta": {
+      "title": "Hello World",
+      "icon": "spatial-lat-lon-icon"
+    },
+    "data": {
+      "hello": {
+        "bnode_type": "bnode-link",
+        "type": "literal",
+        "object": "",
+        "predicate": "http://stardog.com/tutorial/hello",
+        "datatype": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    }
+}
+}

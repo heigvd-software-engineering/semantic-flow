@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!--
+<rdf:Description>
+-->
+
+<ril:expression
+    xmlns:ril="http://namespaces.rdfInference.org/ril/"
+    xmlns:ft="http://namespaces.fourthought.com/test/">
+  <ril:assert>
+    <ft:running>
+      <ril:string-list>
+        <ril:string>Akhilleus</ril:string>
+        <ril:string>Hektor</ril:string>
+      </ril:string-list>
+    </ft:running>
+    <ft:out-of-shape>
+      <ril:string>Aias</ril:string>
+      <ril:string>Hektor</ril:string>
+    </ft:out-of-shape>
+    <ft:wet>
+      <ril:string-list>
+        <ril:string>Odysseus</ril:string>
+        <ril:string>Aeneas</ril:string>
+      </ril:string-list>
+    </ft:wet>
+    <ft:swimming>
+      <ril:string>Odysseus</ril:string>
+      <ril:string>Asteropaios</ril:string>
+    </ft:swimming>
+  </ril:assert>
+
+  <!-- if RUNNING(X) and OUT-OF-SHAPE(X) or WET(X) 
+      and not SWIMMING(X) then SWEATING(X) -->
+  <ril:rule>
+    <ril:premise>
+      <ft:running>
+        <ril:variable name='X'/>
+      </ft:running>
+      <ril:and>
+        <ft:out-of-shape>
+          <ril:variable name='X'/>
+        </ft:out-of-shape>
+      </ril:and>
+      <ril:or>
+        <ft:wet>
+           <ril:variable name='X'/>
+         </ft:wet>
+      </ril:or>
+      <ril:not>
+        <ft:swimming>
+          <ril:variable name='X'/>
+        </ft:swimming>
+      </ril:not>
+    </ril:premise>
+    <ril:conclusion>
+      <ril:assert>
+        <ft:sweating>
+          <ril:variable name='X'/>
+        </ft:sweating>
+      </ril:assert>
+    </ril:conclusion>
+  </ril:rule>
+
+  <ril:fire/>
+
+  <ril:query>
+    <ft:sweating>
+      <ril:variable name='X'/>
+    </ft:sweating>
+  </ril:query>
+</ril:expression>
+
+<!--
+</rdf:Description>
+-->
+
+</rdf:RDF>
