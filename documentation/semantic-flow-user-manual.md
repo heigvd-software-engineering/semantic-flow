@@ -19,7 +19,7 @@ We will follow consecutive steps shown as an ordered list to demonrate how to us
 
 ![blank workspace](./img/blank-workspace.PNG)
 
-2. A home button on the top left corner of the workspace allows to open the collapsible search menu. This menu allow you to find an individual having particular type. 
+2. A home button on the top left corner of the workspace allows to open the collapsible search menu. This menu allow you to find an individual that have particular type. 
 
 ![collapsible menu](./img/collapsible-search-menu.PNG)
 
