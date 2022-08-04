@@ -2,13 +2,6 @@
 ![Issues](https://img.shields.io/github/issues/heigvd-software-engineering/semantic-flow)
 ![Forks](https://img.shields.io/github/forks/heigvd-software-engineering/semantic-flow)
 ![Licence](https://img.shields.io/github/license/heigvd-software-engineering/semantic-flow)
-
-# Contents
-
-    - ./web : SemanticFlow RDF editor. 
-    - ./docker/jena-fuseki : Dockerfile for Apache Jena Fuseki . 
-    - ./data : importable RDF data.
-
 # SemanticFlow
 ![workspace](./workspace.png)
 SemanticFlow is a Web solution for visual RDF graphs editing.
@@ -53,3 +46,9 @@ Please refer to [user manual](./documentation/semantic-flow-user-manual.md).
 # Configuration
 - [SemanticFlow editor configuration](./documentation/semantic-flow-configuration.md)
 - [SemanticFlow template configuration](./documentation/template-configuration.md)
+
+# Contents
+
+    - ./web : SemanticFlow RDF editor. 
+    - ./docker/jena-fuseki : Dockerfile for Apache Jena Fuseki . 
+    - ./data : importable RDF data.
