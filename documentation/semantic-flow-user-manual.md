@@ -6,7 +6,7 @@ The following documentation focuses on how to use the SemanticFlow editor. The e
 
 ## Overview
 
-SemanticFlow editing interface, called `workspace`, allows to graphically manage RDF graphs. It has a set of features that allow the user to create individuals, based on template configuration, to edit their properties and to manage links between them.
+SemanticFlow editing interface, called `workspace`, allows to graphically manage RDF graphs. It has a set of features that allow the user to create individuals, to edit their properties and to manage links between them.
 
 
 ## How to do it
