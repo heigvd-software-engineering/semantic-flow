@@ -5,6 +5,7 @@
     - ./data : importable RDF data.
 
 # Description of the project
+![workspace](./workspace.png)
 Web solution for visual editing of the RDF graphs with advanced functionalities allowing spatio-temporal data management adapted to the needs of research on the history of Swiss territorial control.
 
 The editor is highly configurable and can adapt to diverse and varied contexts thanks to a template system. Configuring a template allows you to define the structure of the resources and properties managed by the tool. Thus, the user can intuitively edit graphs of any nature. The user is assisted by a set of attribute editors that allow simple and intuitive data editing experience.
