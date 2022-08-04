@@ -1,4 +1,11 @@
 # SemanticFlow Configuration
+
+## Scope
+
+The following documentation focuses on how to configure SemanticFlow editor. 
+
+# How to
+
 The `config.json` file can be found in `./web/src/config`.
 
 ## sparql section

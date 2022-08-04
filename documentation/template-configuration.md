@@ -1,5 +1,12 @@
 
 # Template configuration
+
+## Scope
+
+The following documentation focuses on how to configure templates and adapt the editor for work with the particular RDF data structure. 
+
+# How to
+
 Template configuration is done via the `./web/config.json` file. It allows you to adapt the editor to work with your data structure.
 
 Two steps are required to adapt the editor to a new structure:
