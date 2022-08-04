@@ -12,7 +12,6 @@ Includes advanced functionalities allowing spatio-temporal data management adapt
 
 RDF data manipulation is done via SPARQL query language. SPARQL, a W3C standard, is a reference in the RDF field. Our solution is therefore compatible with many existing RDF data sources.
 
-
 # Motivations
 Since Semantic Web ontologies are often overly complex, the objective is to configure the editor using templates to edit the RDF graph intuitively.
 
