@@ -1,7 +1,8 @@
-![Forks](https://img.shields.io/github/forks/heigvd-software-engineering/semantic-flow)
 ![Stars](https://img.shields.io/github/stars/heigvd-software-engineering/semantic-flow)
-![Licence](https://img.shields.io/github/license/heigvd-software-engineering/semantic-flow)
 ![Issues](https://img.shields.io/github/issues/heigvd-software-engineering/semantic-flow)
+![Forks](https://img.shields.io/github/forks/heigvd-software-engineering/semantic-flow)
+![Licence](https://img.shields.io/github/license/heigvd-software-engineering/semantic-flow)
+
 # Contents
 
     - ./web : SemanticFlow RDF editor. 
