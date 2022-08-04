@@ -1,26 +1,44 @@
 # Contents
 
     - ./web : RDF editor. 
-    - ./docker : Dockerfile for Apache Jena Fuseki . 
+    - ./docker/jena-fuseki : Dockerfile for Apache Jena Fuseki . 
     - ./data : importable RDF data.
 
-# Run via docker
+# Description of the project
+Web solution for visual editing of the RDF graphs with advanced functionalities allowing spatio-temporal data management adapted to the needs of research on the history of Swiss territorial control.
 
+The editor is highly configurable and can adapt to diverse and varied contexts thanks to a template system. Configuring a template allows you to define the structure of the resources and properties managed by the tool. Thus, the user can intuitively edit graphs of any nature.
 
+To manipulate RDF data, the editor uses the HTTP protocol and the SPARQL query language. SPARQL, a W3C standard, is a reference in the manipulation of RDF data. Our solution is therefore compatible with a large number of existing RDF data sources.
 
-## Setup the RDF dataset
+# Motivations
+Since Semantic Web ontologies are often very complex, the objective is to configure the editor using templates to be able to edit the RDF graph in an intuitive way.
 
-Once the Apache Jena is running, its management console is accessible via http://localhost:3030/. 
+Configuring a template allows the user's view to be reduced to the resources and properties of interest. Editing large RDF graphs thus becomes much more ergonomic. The user is assisted by a set of attribute editors to enter data in a simple and intuitive way.
 
-The dataset `/ds` should be available in the list. Apache Jena offers several end points for each dataset. The rdf editor is configured to use the dataset called `ds`, if you change this configuration, please name the dataset accordingly.
+# Quick start /with docker
+    
+    docker compose build
+    docker compose up
 
-### Add data into the dataset
+Will run the docker-compose file and start both Apache Jena Fuseki and the editor.
 
-Once the dataset is ready, click on `add data` and select `musici.ttl` from `./data`. That dataset originates from Stardog and contains 50 000 triples. 
+# Detailed installation instruction /without docker
 
-This part is not required. You can run the editor on an empty dataset as well. 
+## Install Apache Jena Fuseki
+You can download the latest version of Apache Jena Fuseki from [here](https://jena.apache.org/download/index.cgi).
 
-# Run the application
+Installations instructions can be found [here](https://jena.apache.org/documentation/fuseki2/index.html).
+
+You should prefer the version of Apache Jena Fuseki that includes the UI so you can easily manage datasets and import data.
+
+### Run Apache Jena Fuseki in In-Memory mode with `ds` dataset
+Download and extract the archive from Apache Jena Binary Distributions [here](https://jena.apache.org/download/index.cgi).
+    
+    cd /path/to/apache-jena-fuseki
+    ./fuseki-server --mem /ds
+
+## Run the editor
 
 From the "./web" folder, run:
 
@@ -30,66 +48,34 @@ npm run start
 ```
 
 `npm install` is necessary only before the first run.
-# Configuring the application
-The `config.json` file can be found in `./web/src/config`.
 
-## sparql section
+# Setup the RDF dataset
 
-```
-"sparql" : {
-        "api": { 
-            "query": "http://localhost:3030/ds/query",
-            "update":"http://localhost:3030/ds/update"
-        },
-        "graph": "", 
-        "prefixes": {
-            "song"      : "http://stardog.com/tutorial/song/",
-            "stardog"   : "http://stardog.com/tutorial/",
-            "geo"       : "http://www.w3.org/2003/01/geo/wgs84_pos#",
-            "rdf"       : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-            "xsd"       : "http://www.w3.org/2001/XMLSchema#"
-        },
-        "type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-    }
-```
-### sparql endpoints
-Providing the dataset endpoints under `sparql.api` section of the `config.json` file is required. This editor uses SPARQL protocol to manipulate RDF data.
+Both Dockerized and non-Dockerized installations run Apache Jena with an empty dataset named `ds`. 
 
-### sparql type
-The editor is using `rdf:type` to match a particular individual with its templates. That predicate can be changed in `sparql.type` : 
-```
-"type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-```
-It is important to have a prefix that match an updated `sparql.type` and to update the `default_type_attribute` in order to match the new type configuration.
+Apache Jena UI console is accessible via http://localhost:3030/. 
 
-### prefixes
-Configured under `sparql.prefixed` section in the form of a dictionary. Allow the editor to display prefixed URIs. Prefixes are also used in the Core algorithms.
+The dataset `/ds` should be available in the list. Apache Jena offers several endpoints per dataset. The rdf editor is configured to use the dataset called `ds`, if you change this configuration, please name the dataset accordingly.
 
-Following prefixed are mandatory: xsd, rdf. The `rdf` prefix is no longer mandatory if not used for `sparql.type`. 
+### Add data into the dataset
 
-It is also required to have at least one dataset related prefix. It can be a prefix without name:
+Once the dataset is ready, click on `add data` and select `musici.ttl` from `./data`. That dataset originates from Stardog and contains 50 000 triples. 
 
-```
-""   : "http://stardog.com/tutorial/"
-```
+The editors does not require any data to be loaded in the dataset. This part is not required. You can run the editor on an empty dataset as well. 
 
-## default attributes
-```
-"default_attribute_editor": {
-    "field": "literal",
-    "type": "readonly"
-},
-"type_attribute_editor": {
-    "field": "selector",
-    "type": "type-selector"
-}
-```
 
-This section defines the editor's behavior when handling resources without templates. Only the type attribute can be changed in the individual with unknown template.
+# Template configuration
+Template configuration is done via the `./web/config.json` file. It allows you to adapt the editor to work with your data structure.
 
-`default_attribute_editor` : readonly for all attributes other than type. 
+Two steps are required to adapt the editor to a new structure:
+- defined prefixes for the dataset
+- define the templates
 
-`type_attribute_editor` : editor for type attribute. Changing the type of the individual will link it with the related template.
+## Prefixes
+Configured under `sparql.prefixes` section in form of a JSON dictionary. Allow the editor to display prefixed URIs. Prefixes are also used in the Core algorithms.
+
+At least you should have both `rdf` and `xsd` prefixed and at least one prefix related to your dataset which can be a nameless prefix. 
+
 
 ## template configuration
 ```
@@ -142,6 +128,7 @@ The predicate matched by `prefix:name` will be shown as an attribute of the indi
 The only supported `grouping` option is `attribute`. 
 
 The `editor` section specifies a particular editor to be used to edit that attribute.
+
 
 #### attrbute editor configuration
 We have three types of fields: literal, bnode, and selector.
