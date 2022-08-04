@@ -4,17 +4,17 @@
 ![Issues](https://img.shields.io/github/issues/heigvd-software-engineering/semantic-flow)
 # Contents
 
-    - ./web : RDF editor. 
+    - ./web : SemanticFlow RDF editor. 
     - ./docker/jena-fuseki : Dockerfile for Apache Jena Fuseki . 
     - ./data : importable RDF data.
 
 # Description of the project
 ![workspace](./workspace.png)
-Web solution for visual editing of the RDF graphs with advanced functionalities allowing spatio-temporal data management adapted to the needs of research on the history of Swiss territorial control.
+SemanticFlow is a Web solution that allows visual edit of the RDF graphs with advanced functionalities allowing spatio-temporal data management adapted to the needs of research on the history of Swiss territorial control.
 
-The editor is highly configurable and can adapt to diverse and varied contexts thanks to a template system. Configuring a template allows you to define the structure of the resources and properties managed by the tool. Thus, the user can intuitively edit graphs of any nature. The user is assisted by a set of attribute editors that allow simple and intuitive data editing experience.
+It is highly configurable and can adapt to diverse and varied contexts thanks to a template system. Configuring a template allows you to define the structure of the resources and properties managed by the tool. Thus, the user can intuitively edit graphs of any nature. The user is assisted by a set of attribute editors that allow simple and intuitive data editing experience.
 
-The editor uses the HTTP protocol and the SPARQL query language to manipulate RDF data. SPARQL, a W3C standard, is a reference in the RDF field. Our solution is therefore compatible with many existing RDF data sources.
+RDF data manipulation is done via SPARQL query language. SPARQL, a W3C standard, is a reference in the RDF field. Our solution is therefore compatible with many existing RDF data sources.
 
 # Motivations
 Since Semantic Web ontologies are often overly complex, the objective is to configure the editor using templates to edit the RDF graph intuitively.
@@ -26,7 +26,7 @@ Configuring a template allows the user's view of the graph to be reduced to the 
     docker compose build
     docker compose up
 
-Will run the docker-compose file and start both Apache Jena Fuseki and the editor.
+Will run the docker-compose file and start both Apache Jena Fuseki and SemanticFlow.
 
 # Installation instructions /without docker
 Please refer to [detailed installation](./documentation/detailed-installation.md) instructions.
@@ -41,10 +41,10 @@ The dataset `/ds` should be available in the list. Apache Jena offers several en
 ### Add data into the dataset
 Once the dataset is ready, click on `add data` and select `musici.ttl` from `./data`. That dataset originates from Stardog and contains 50 000 triples. 
 
-The editor do not require any data to be loaded in the dataset. This part is not required. You can run the editor on an empty dataset as well.
+SemanticFlow do not require any data to be loaded in the dataset. This part is not required. You can run the editor on an empty dataset as well.
 
-# Editor configuration
-Please refer to [editor configuration](./documentation/editor-configuration.md).
+# SemanticFlow configuration
+Please refer to [SemanticFlow configuration](./documentation/semantic-flow-configuration.md).
 
 # Template configuration
 Please refer to [template configuration](./documentation/template-configuration.md).

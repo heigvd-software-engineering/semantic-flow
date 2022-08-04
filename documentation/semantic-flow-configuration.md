@@ -1,4 +1,4 @@
-# Configuring the editor
+# SemanticFlow Configuration
 The `config.json` file can be found in `./web/src/config`.
 
 ## sparql section
@@ -21,10 +21,10 @@ The `config.json` file can be found in `./web/src/config`.
     }
 ```
 ### sparql endpoints
-Providing the dataset endpoints under `sparql.api` section of the `config.json` file is required. This editor uses SPARQL protocol to manipulate RDF data.
+Providing the dataset endpoints under `sparql.api` section of the `config.json` file is required. SemanticFlow uses SPARQL protocol to manipulate RDF data.
 
 ### sparql type
-The editor is using `rdf:type` to match a particular individual with its templates. That predicate can be changed in `sparql.type` : 
+SemanticFlow is using `rdf:type` to match a particular individual with its templates. That predicate can be changed in `sparql.type` : 
 ```
 "type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
 ```
