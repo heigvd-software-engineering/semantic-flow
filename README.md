@@ -16,7 +16,7 @@ Since Semantic Web ontologies are often very complex, the objective is to config
 
 Configuring a template allows the user's view to be reduced to the resources and properties of interest. Editing large RDF graphs thus becomes much more ergonomic. The user is assisted by a set of attribute editors to enter data in a simple and intuitive way.
 
-# Quick start /with docker
+# Quick start /docker
     
     docker compose build
     docker compose up
