@@ -774,6 +774,7 @@ aside.asset-panel .dndnode:hover{
   border-top-left-radius: var(--rounded-corners);
   border-bottom-left-radius: var(--rounded-corners);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .uri-input-container .uri-prefix .arrow{
@@ -848,8 +849,7 @@ aside.asset-panel .dndnode:hover{
   border-top-left-radius: var(--rounded-corners);
   border-bottom-left-radius: var(--rounded-corners);
   padding: 0 var(--small-space);
-  min-width: 70px;
-  
+  white-space: nowrap;
 }
 
 .uri-input-prefix-selector .prefix-option .prefix-option-value{
@@ -862,6 +862,7 @@ aside.asset-panel .dndnode:hover{
   border-bottom-right-radius: var(--rounded-corners);
   font-size: var(--font-tiny);
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .uri-input-prefix-selector .prefix-option:hover .prefix-option-prefix{

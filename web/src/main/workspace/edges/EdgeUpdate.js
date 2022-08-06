@@ -88,7 +88,7 @@ export default function EdgeUpdate({
       return null;
     }
   
-    const foreignObjectWidth = 250;
+    const foreignObjectWidth = 350;
     const foreignObjectHeight = 300; 
 
   return (

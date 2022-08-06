@@ -70,7 +70,7 @@ export default function EdgeCreate({
       targetY,
     });
 
-    const foreignObjectWidth = 200;
+    const foreignObjectWidth = 300;
     const foreignObjectHeight = 300;   
 
   return (

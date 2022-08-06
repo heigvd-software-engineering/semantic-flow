@@ -1,0 +1,256 @@
+{
+    "sparql" : {
+        "api": { 
+            "query": "http://localhost:3030/ds/query",
+            "update":"http://localhost:3030/ds/update"
+        },
+        "graph": "", 
+        "prefixes": {
+            "source"             : "https://hls-dhs-dss.ch/source/",
+            "control"            : "https://hls-dhs-dss.ch/control/",
+            "entity"             : "https://hls-dhs-dss.ch/entity/",
+            "historical-date"    : "https://hls-dhs-dss.ch/historical-date/",
+            "geo"       : "http://www.w3.org/2003/01/geo/wgs84_pos#",
+            "rdf"       : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "xsd"       : "http://www.w3.org/2001/XMLSchema#"
+        },
+        "type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    },
+    "default_type_attribute": { 
+        "prefix": "rdf",
+        "name": "type",
+        "grouping": "attribute",
+        "editor": {
+            "field": "selector",
+            "type": "type-selector"
+        }
+    },
+    "default_attribute_editor": {
+        "field": "literal",
+        "type": "readonly"
+    },
+    "type_attribute_editor": {
+        "field": "selector",
+        "type": "type-selector"
+    },
+    "template": [
+        {
+            "prefix": "control",
+            "name": "Direct",
+            "predicates": []
+        },{
+            "prefix": "control",
+            "name": "Shared",
+            "predicates": []
+        },{
+            "prefix": "control",
+            "name": "Contested",
+            "predicates": []
+        },{
+            "prefix": "control",
+            "name": "Uncertain",
+            "predicates": []
+        },{
+            "prefix": "entity",
+            "name": "Polity",
+            "predicates": [
+                { 
+                    "prefix": "entity",
+                    "name": "fullname",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{ 
+                    "prefix": "entity",
+                    "name": "polity-type",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                }, {
+                    "prefix": "entity",
+                    "name": "start-date",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "bnode",
+                        "type": "uncertain-around-date"
+                    }
+                }, {
+                    "prefix": "entity",
+                    "name": "end-date",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "bnode",
+                        "type": "uncertain-around-date"
+                    }
+                }, {
+                    "prefix": "entity",
+                    "name": "first-mention",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "bnode",
+                        "type": "uncertain-possibilities-date"
+                    }
+                }
+            ]
+        },{
+            "prefix": "entity",
+            "name": "Territory",
+            "predicates": [
+                { 
+                    "prefix": "entity",
+                    "name": "geometry-id",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{ 
+                    "prefix": "entity",
+                    "name": "toponym",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                }
+            ]
+        },{
+            "prefix": "source",
+            "name": "Source",
+            "predicates": [
+                { 
+                    "prefix": "source",
+                    "name": "title",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{ 
+                    "prefix": "source",
+                    "name": "description",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-textarea"
+                    }
+                },{ 
+                    "prefix": "source",
+                    "name": "URI",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{ 
+                    "prefix": "source",
+                    "name": "DOI",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{ 
+                    "prefix": "source",
+                    "name": "ISBN",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                }
+            ]
+        },{
+            "prefix": "historical-date",
+            "name": "KnownDate",
+            "predicates": [
+                { 
+                    "prefix": "historical-date",
+                    "name": "year",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-number"
+                    },
+                    "datatype": {
+                        "prefix": "xsd",
+                        "name": "integer"
+                    }
+                },{ 
+                    "prefix": "historical-date",
+                    "name": "month",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-number"
+                    },
+                    "datatype": {
+                        "prefix": "xsd",
+                        "name": "integer"
+                    }
+                },{ 
+                    "prefix": "historical-date",
+                    "name": "day",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-number"
+                    },
+                    "datatype": {
+                        "prefix": "xsd",
+                        "name": "integer"
+                    }
+                },{ 
+                    "prefix": "historical-date",
+                    "name": "id",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{ 
+                    "prefix": "historical-date",
+                    "name": "title",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                },{ 
+                    "prefix": "historical-date",
+                    "name": "calendar",
+                    "grouping": "attribute",
+                    "editor": {
+                        "field": "literal",
+                        "type": "literal-text"
+                    }
+                }
+            ]
+        },{
+            "prefix": "historical-date",
+            "name": "UncertainPossibilitiesDate",
+            "predicates": []
+        },{
+            "prefix": "historical-date",
+            "name": "UncertainBoundedDate",
+            "predicates": []
+        }
+    ],
+    "react_flow": {
+        "positioning": {
+            "root": {
+                "x": 75,
+                "y": 100
+            },
+            "spacing": {
+                "horizontal": 700,
+                "vertical": 50
+            },
+            "offset": 25
+        }
+    }
+}
