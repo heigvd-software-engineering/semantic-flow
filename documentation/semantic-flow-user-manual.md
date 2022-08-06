@@ -53,16 +53,62 @@ We will follow consecutive steps shown as an ordered list to demonrate how to us
 
 ![drag and drop](./img/workspace-link-individual-2.PNG)
 
-4. Drap and Drop from the source handle to the target handle to link the individual to the target resource.
+4. Drap and Drop from the source handle to the target handle to link the individual to the target resource. 
 
 ![drag and drop](./img/workspace-link-individual-3.PNG)
 
-5. Type the predicate URI and click on SAVE. 
+5. Chose the appropriate prefix, type the rest of the predicate URI, and click on SAVE. 
 
 ![drag and drop](./img/workspace-link-individual-4.PNG)
 
+## Manage individual
+This part of the documentation focuses on how to change the URI of an individual or to delete it.
 
+1. Click on the "manage" button in the individual's header. In yellow.
+![manage button](./img/individual-manage-1.PNG)
+![manage button](./img/individual-manage-2.PNG)
 
+### Edit individual's URI
+2. Change the individual's URI. You can change the prefix of the URI as well.
+3. Click Save.
+
+### Delete individual
+2. Click on the "delete" button in the individual's header. In red. The individual will be completly removed from the dataset. All the triples related to the individual will be removed.
+
+## Manage individual's attributes
+
+This part of the documentation focuses on how to manage the attributes of an individual.
+
+### Add new attribute
+You can only add attributes that are configured in the template. The attribute will be displayed in its missing form, in red, in the individual's node.
+
+1. Click on the missing attribute in the individual's node.
+![add attribut](./img/attribute-add-1.PNG)
+
+2. Input the value of the attribute and click the save button. 
+![add attribut](./img/attribute-add-2.PNG)
+
+3. New attribute has been added to the individual.
+![add attribut](./img/attribute-add-3.PNG)
+
+### Multivalue existing attribute
+
+1. When in edit mode, click on multivalue button, in yellow.
+![add attribut](./img/attribute-multivalue-1.PNG)
+
+2. Input the second value and click save
+![add attribut](./img/attribute-multivalue-2.PNG)
+
+3. New value has been added to the attribute.
+![add attribut](./img/attribute-multivalue-3.PNG)
+
+### Delete attribute
+
+1. When in edit mode, leave all the fields empty and click save.
+![add attribut](./img/attribute-delete-1.PNG)
+
+2. Attribute has been deleted.
+![add attribut](./img/attribute-delete-2.PNG)
 
 
 
