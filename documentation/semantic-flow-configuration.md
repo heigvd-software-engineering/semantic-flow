@@ -60,7 +60,7 @@ It is also required to have at least one dataset related prefix. It can be a pre
 }
 ```
 
-This section defines the editor's behavior when handling resources without templates. Only the type attribute can be changed in the individual with unknown template.
+This section defines the editor's behavior when handling resources without templates. Only the type of attribute can be changed in the individual with unknown template. 
 
 `default_attribute_editor` : readonly for all attributes other than type. 
 

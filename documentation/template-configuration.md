@@ -3,7 +3,7 @@
 
 ## Scope
 
-The following documentation focuses on how to configure templates and adapt the editor for work with the particular RDF data structure. 
+The following documentation focuses on how to configure templates and adapt the editor for work with a particular RDF data structure. 
 
 # How to
 
@@ -17,7 +17,6 @@ Two steps are required to adapt the editor to a new structure:
 Configured under `sparql.prefixes` section in form of a JSON dictionary. Allow the editor to display prefixed URIs. Prefixes are also used in the Core algorithms.
 
 At least you should have both `rdf` and `xsd` prefixed and at least one prefix related to your dataset which can be a nameless prefix. 
-
 
 ## template configuration
 ```

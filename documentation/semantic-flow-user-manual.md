@@ -2,7 +2,7 @@
 
 ## Scope
 
-The following documentation focuses on how to use the SemanticFlow editor. The editor is configured to work with the `./data/music.ttl` stardog's dataset through out this document.
+The following documentation focuses on how to use the SemanticFlow editor. The editor is configured to work with the `./data/music.ttl` stardog's dataset throughout this document.
 
 ## Overview
 
@@ -11,15 +11,15 @@ SemanticFlow editing interface, called `workspace`, allows to graphically manage
 
 ## How to do it
 
-We will follow consecutive steps shown as an ordered list to demonrate how to use the editor. 
+We will follow consecutive steps shown as an ordered list to demonstrate how to use the editor. 
 
 ## Open an existing individual
 
-1. When you first enter into SemanticFlow editor, you will see a blank workspace. 
+1. When you first enter SemanticFlow editor, you will see a blank workspace. 
 
 ![blank workspace](./img/blank-workspace.PNG)
 
-2. A home button on the top left corner of the workspace allows to open the collapsible search menu. This menu allow you to find an individual that have particular type. 
+2. A home button on the top left corner of the workspace allows to open the collapsible search menu. This menu allows you to find an individual that have type. 
 
 ![collapsible menu](./img/collapsible-search-menu.PNG)
 
@@ -33,7 +33,7 @@ We will follow consecutive steps shown as an ordered list to demonrate how to us
 
 ![asset panel](./img/workspace-asset-panel.PNG)
 
-2. Drag and Drop an individual from the asset panel to the workspace. 
+2. Drag and drop an individual from the asset panel to the workspace. 
 
 ![drag and drop](./img/workspace-drag-and-drop.PNG)
 
@@ -43,7 +43,7 @@ We will follow consecutive steps shown as an ordered list to demonrate how to us
 
 ### Link existing resource into the workspace
 
-1. Drag and Drop an individual from the asset panel onto the workspace, the same way we did during the new individual creation.
+1. Drag and drop an individual from the asset panel onto the workspace, the same way we did during the new individual creation.
 
 2. When typing the individual's URI, you will see a list of resources that match the query. You can either type the full URI of an existing resource or just click on any proposal from the list.
 
@@ -53,7 +53,7 @@ We will follow consecutive steps shown as an ordered list to demonrate how to us
 
 ![drag and drop](./img/workspace-link-individual-2.PNG)
 
-4. Drap and Drop from the source handle to the target handle to link the individual to the target resource. 
+4. Drag and drop from the source handle to the target handle to link the individual to the target resource.
 
 ![drag and drop](./img/workspace-link-individual-3.PNG)
 
@@ -73,7 +73,7 @@ This part of the documentation focuses on how to change the URI of an individual
 3. Click Save.
 
 ### Delete individual
-2. Click on the "delete" button in the individual's header. In red. The individual will be completly removed from the dataset. All the triples related to the individual will be removed.
+2. Click on the "delete" button in the individual's header. In red. The individual will be completely removed from the dataset. All the triples related to the individual will be removed.
 
 ## Manage individual's attributes
 
@@ -91,9 +91,9 @@ You can only add attributes that are configured in the template. The attribute w
 3. New attribute has been added to the individual.
 ![add attribut](./img/attribute-add-3.PNG)
 
-### Multivalue existing attribute
+### Multi-value existing attribute
 
-1. When in edit mode, click on multivalue button, in yellow.
+1. When in edit mode, click on multi-value button, in yellow.
 ![add attribut](./img/attribute-multivalue-1.PNG)
 
 2. Input the second value and click save

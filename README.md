@@ -49,5 +49,7 @@ Please refer to [user manual](./documentation/semantic-flow-user-manual.md).
 # Contents
 
     - ./web : SemanticFlow RDF editor. 
+    - ./documentation : SemanticFlow documentation.
     - ./docker/jena-fuseki : Dockerfile for Apache Jena Fuseki . 
     - ./data : importable RDF data.
+    
