@@ -12,11 +12,11 @@ const Selector = ({subject, selected}) => {
     }, [subject, selected]);
 
     const searchFunction = useCallback((search, setResults) => {
-        if(active && search.length < 3) {
+        if(active && search.length < 2) {
             setResults([]);
             return;
         }
-        active && search.length >= 3 && (async () => {
+        active && search.length >= 2 && (async () => {
             setResults(await Repository.searchSubjectOfClass(subject.value, search));
         })();
     }, [subject, active]);  

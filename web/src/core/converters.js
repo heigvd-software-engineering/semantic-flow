@@ -282,7 +282,14 @@ const transformRelationsIntoAttributs = ({ nodes, edges, resources }) => {
 
         // a resource having indentified templates must have type property, it is an individual with known template
         let isTemplateIndividual = ressource.templates.length > 0;
-       
+        if(!isTemplateIndividual && ressource.type !== 'bnode' && ressource.attributes.length === 0){
+            // it could be an RDF resouce (without rdf:type) or an individual with an unknown template
+            // mandatory type attribute for any type of resource other than a bnode
+            ressource.attributes.push(RdfFactory.makeDefaultAttribute({
+                type: 'uri',
+                value: Config.getTypePredicate()
+            }));
+        }
         // loop adjacent edges to find the ones that corresponds to the template
         for(const edge of edges.filter(e => e.source === indId)){
 
@@ -321,14 +328,7 @@ const transformRelationsIntoAttributs = ({ nodes, edges, resources }) => {
                     }
                 }
             } else {
-                // it could be an RDF resouce (without rdf:type) or an individual with an unknown template
-                if(ressource.type !== 'bnode' && ressource.attributes.length === 0){
-                    // mandatory type attribute for any type of resource other than a bnode
-                    ressource.attributes.push(RdfFactory.makeDefaultAttribute({
-                        type: 'uri',
-                        value: Config.getTypePredicate()
-                    }));
-                }
+               
                 let {predicate, object} = edge.data;
                 let typeOrLiteral = predicate.value === Config.getTypePredicate() || object.type === 'literal';
 
