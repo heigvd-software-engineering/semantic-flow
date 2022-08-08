@@ -114,7 +114,6 @@ describe('Workspace Component', () => {
         /* Specify the individuals URI */
 
         fireEvent.change(uriInput, {target: {value: "Stefan Producer"}});        
-
         await waitFor(() => expect(Repository.searchSimilarIndividual).toHaveBeenCalledTimes(1));
 
         let createButton = await screen.findByTestId("button-create-link-uri");
@@ -205,10 +204,8 @@ describe('Workspace Component', () => {
         
         fireEvent.change(uriInput, {target: {value: "teofanovic_stefan"}});
         
-
         await waitFor(() => expect(Repository.searchSimilarIndividual).toHaveBeenCalledTimes(1));
         
-
         /* Click on "LINK" button */
         let linkButton = await screen.findByTestId("button-create-link-uri");
         expect(linkButton).toBeInTheDocument();
