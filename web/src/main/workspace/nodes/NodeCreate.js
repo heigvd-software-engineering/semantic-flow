@@ -33,6 +33,13 @@ const setAsActive = (value, active_individual, dispatch) => {
     }    
 }
 
+const debounceSimilarUri = 
+    debounceInput(async (val, setSimilars) => {
+        val.input.length >= 3 && (async () => {
+            setSimilars(await Repository.searchSimilarIndividual(val.prefix, val.input));
+        })();
+    });
+
 const NodeCreate = ({ data: initial }) => {
 
     const { main: { active_individual }, dispatch, nodes, edges, setNodes, setEdges } = useContext(MainContext);
@@ -50,17 +57,7 @@ const NodeCreate = ({ data: initial }) => {
     const [ types, setTypes ] = useState([]);         
     const [ missingTypes, setMissingTypes ] = useState([]);    
 
-    const debounceUri = useCallback(
-        debounceInput(async (val) => {
-            setValue({
-                ...value,
-                input: val,
-                uri: Config.getUri(value.prefix, val)
-            });
-        }),
-        [setValue, value.prefix, debounceInput]
-    );
-
+    
     useEffect(() => {
         if(initial){
             let type = initial.attributes.find((a) => a.predicate.uri === Config.getTypePredicate());
@@ -71,13 +68,6 @@ const NodeCreate = ({ data: initial }) => {
     useEffect(() => {
         setMissingTypes([]);
     }, [uriMode, setMissingTypes]);
-
-    useEffect(() => {
-        // when the value input changes, we search for similar individuals
-        value.input.length >= 3 && (async () => {
-            setSimilars(await Repository.searchSimilarIndividual(value.prefix, value.input));
-        })();
-    }, [value.input, value.prefix, setSimilars]);
 
     useEffect(() => {
         // find in similars and adapt the uri mode
@@ -108,11 +98,13 @@ const NodeCreate = ({ data: initial }) => {
     }, [setValue, value]);
     
     const onValueChange = useCallback((pref, val) => {
-        setValue({
+        let newValue = {
             prefix: pref,
             input: val,
             uri: Config.getUri(pref, val)
-        });
+        };
+        setValue(newValue);
+        debounceSimilarUri(newValue, setSimilars);
     }, [setValue]);
 
     const createNodeClick = useCallback(() => {
@@ -178,7 +170,6 @@ const NodeCreate = ({ data: initial }) => {
                             prefix={value.prefix}
                             placeholder="Specify the individual URI"
                             setValue={onValueChange}
-                            debounceUri={debounceUri}
                             value={value.input}
                         />
                         { value.input.length >= 3 && (

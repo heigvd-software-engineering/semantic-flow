@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Config from '../config/config';
-const URIInput = ({prefix:initialPrefix, placeholder, setValue, debounceUri, value}) => {
+const URIInput = ({prefix:initialPrefix, placeholder, setValue, value}) => {
     
     const [ prefix, setPrefix ] = useState(initialPrefix);
     const [ open, setOpen ] = useState(false);
@@ -26,7 +26,6 @@ const URIInput = ({prefix:initialPrefix, placeholder, setValue, debounceUri, val
                         spellCheck="false"
                         onChange={(ev) => {
                             setValue(prefix, ev.target.value);
-                            if(debounceUri) debounceUri(ev.target.value);
                         } } 
                         value={value}
                         autoFocus

@@ -28,9 +28,15 @@ class RdfDAO {
 
     static async searchSubjectOfClass(cls, search) {
         return await Query({
-            select: `?o`,
-            tripplePatterns: `?o a <${cls}> .`,
-            filterPatterns: `regex(str(?o), "${search}", "i")`
+            select: `DISTINCT ?o`,
+            tripplePatterns: `
+                ?o a <${cls}> .
+                ?o (a|!a) ?p .
+            `,
+            filterPatterns: `
+                isLiteral(?p) &&
+                (regex(str(?o), "${search}", "i") || regex(str(?p), "${search}", "i"))
+            `,
         }); 
     }
     
